@@ -11,7 +11,8 @@
       ./disko-config.nix
     ];
 
-  # TODO add lanzaboot
+  # TODO add lanzaboote
+  wihajsters.secureboot-lanzaboote.enable = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
