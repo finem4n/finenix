@@ -1,3 +1,5 @@
+# Resources:
+# https://nix-community.github.io/lanzaboote/introduction.html
 {
   pkgs,
   config,
@@ -14,7 +16,18 @@ in {
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      hello
+      sbctl
     ];
+
+    boot.loader.systemd-boot.enable = lib.mkForce false;
+
+    boot.lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
+      autoEnrollKeys = {
+        enable = true;
+        autoReboot = true;
+      };
+    };
   };
 }
