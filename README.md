@@ -2,7 +2,7 @@
 
 # Installation
 1. Live usb; secureboot off
-2. `cd /mnt` & `git clone https://github.com/finem4n/finenix.git`
+2. `cd /tmp ` & `git clone https://github.com/finem4n/finenix.git`
 3. `cd finenix`
 4. `sudo sh ./installer_scripts/diskorunner.sh $path_to_host_disko`
 5. Reboot
