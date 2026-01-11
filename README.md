@@ -5,6 +5,9 @@
 2. `cd /tmp ` & `git clone https://github.com/finem4n/finenix.git`
 3. `cd finenix`
 4. `sudo sh ./installer_scripts/diskorunner.sh $path_to_host_disko`
+5. `sudo nixos-install --flake $hostname`
+5. mkdir -p fineman
+6. git clone into fineman/finenix
 5. Reboot
 6. Create user's password
 7. Turn off root password
