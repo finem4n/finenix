@@ -15,13 +15,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko }: {
+  outputs = { self, nixpkgs, disko, lanzaboote }: {
     nixosConfigurations = {
       hp_desktop_pro_g2 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           # TODO: create common modules
           disko.nixosModules.disko
+          lanzaboote.nixosModules.lanzaboote
           ./wihajsters/secureboot-lanzaboote
           ./modules/users/fineman
           ./hosts/x86_64-linux/hp_desktop_pro_g2
