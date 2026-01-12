@@ -9,8 +9,8 @@
 5. mkdir -p fineman
 6. git clone into fineman/finenix
 5. Reboot
-6. Create user's password
-7. Turn off root password
+6. Create user's password 
+7. Turn off root password `sudo passwd -l root`
 <!-- TODO: update lines under -->
 8. Sth sth lanzaboote settings
 9. Turn on secureboot
