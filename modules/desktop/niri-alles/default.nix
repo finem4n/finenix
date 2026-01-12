@@ -29,6 +29,7 @@ in {
 
     services.gnome.sushi.enable = true;
 
+    programs.waybar.enable = true;
     environment.systemPackages = with pkgs; [ 
       kitty # TODO or wezterm or ghostty
       mako # TODO or swaync???
