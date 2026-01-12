@@ -25,6 +25,7 @@
           lanzaboote.nixosModules.lanzaboote
           ./wihajsters/secureboot-lanzaboote
           ./modules/users/fineman
+          ./modules/desktop/niri-alles
           ./hosts/x86_64-linux/hp_desktop_pro_g2
         ];
       };

@@ -13,6 +13,7 @@
   # TODO add lanzaboote
   wihajsters.secureboot-lanzaboote.enable = true;
   modules.users.fineman.enable = true;
+  modules.desktop.niri-alles.enable = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.efi.canTouchEfiVariables = true;
