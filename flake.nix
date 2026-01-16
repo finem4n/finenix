@@ -28,7 +28,7 @@
         let 
           system = "x86_64-linux";
           username = "fineman";
-          host = "hp_desktop_pro_g2"
+          host = "hp_desktop_pro_g2";
         in
           nixpkgs.lib.nixosSystem {
             inherit system;
