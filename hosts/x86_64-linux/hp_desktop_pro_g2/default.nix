@@ -15,9 +15,13 @@
   modules.users.fineman.enable = true;
   modules.desktop.niri-alles.enable = true;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.efi.canTouchEfiVariables = true;
+  # TODO question 
+  # in flake.nix what´s the purpose of outputs = inputs@{ self, nixpkgs, ... }: {
+  # but why does it work without inputs@
 
+  # TODO enable flakes here
+  # tpm + password
+  # i have a flake.nix for my configuration.nix i have two hosts one for nixos and the other for fedora how am i supposed to import home manager to both 
   # networking.hostName = "nixos"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
