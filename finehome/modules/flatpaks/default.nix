@@ -6,9 +6,9 @@
 }: 
 
 let
-  cfg = config.modules.flatpaks;
+  cfg = config.home.modules.flatpaks;
 in {
-  options.modules.flatpaks = {
+  options.home.modules.flatpaks = {
     enable = lib.mkEnableOption "Enable declarative-flatpak";
   };
 
