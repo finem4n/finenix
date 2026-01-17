@@ -13,9 +13,9 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    imports = [
-      declarative-flatpak.homeModules.default
-    ];
+    # imports = [
+    #   declarative-flatpak.homeModules.default
+    # ];
 
     services.flatpak = {
       enable = true;
