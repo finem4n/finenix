@@ -12,8 +12,8 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    home.file.".config/niri" = {
-      source = ../../../fine-stew/niri;
+    xdg.configFile."niri" = {
+      source = ../../../fine-stew/niri/.config/niri;
       recursive = true;
     };
   };
