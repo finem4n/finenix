@@ -48,7 +48,7 @@
                 home-manager.useGlobalPkgs = true; # TODO whats that
                 home-manager.useUserPackages = true; # TODO whats that
                 home-manager.users.${username} = {
-                  configuration = ./finehome/hosts/${system}/${host}/${username};
+                  imports = [ ./finehome/hosts/${system}/${host}/${username} ];
                   specialArgs = {
                     inherit declarative-flatpak;
                   };
