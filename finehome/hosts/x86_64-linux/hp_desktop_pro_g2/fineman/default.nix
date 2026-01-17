@@ -3,6 +3,7 @@
 {
   imports = [ 
     ../../../../programs/niri
+    ../../../../modules/flatpaks
   ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
