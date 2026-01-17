@@ -5,9 +5,9 @@
 }: 
 
 let
-  cfg = config.home.packages.niri.config;
+  cfg = config.home.programs.niri.config;
 in {
-  options.home.packages.niri.config = {
+  options.home.programs.niri.config = {
     enable = lib.mkEnableOption "Enable niri config";
   };
 

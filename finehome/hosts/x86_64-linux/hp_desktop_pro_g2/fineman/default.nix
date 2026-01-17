@@ -7,7 +7,7 @@
 
   home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
 
-  home.packages.niri.config.enable = true;
+  home.programs.niri.config.enable = true;
   home.packages = with pkgs; [
   ];
 }
