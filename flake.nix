@@ -20,9 +20,11 @@
       url = "github:nix-community/home-manager/release-25.11"; # TODO let in version
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
   };
 
-  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, ... }: {
+  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, ... }: {
     nixosConfigurations = {
       hp_desktop_pro_g2 = 
         let 
