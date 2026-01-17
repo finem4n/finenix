@@ -45,10 +45,10 @@
               # ./finehome/programs/niri
               home-manager.nixosModules.home-manager
               {
-                home-manager.useGlobalPkgs = true; # TODO whats that
-                home-manager.useUserPackages = true; # TODO whats that
-                home-manager.users.${username} = {
-                  imports = [ ./finehome/hosts/${system}/${host}/${username} ];
+                home-manager = {
+                  useGlobalPkgs = true; # TODO whats that
+                  useUserPackages = true; # TODO whats that
+                  users.${username} = ./finehome/hosts/${system}/${host}/${username} ;
                   extraSpecialArgs = {
                     declarative-flatpak = declarative-flatpak;
                   };
