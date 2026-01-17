@@ -13,7 +13,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     home.file.".config/niri" = {
-      source = ../../../fine-stew/niri/;
+      source = ../../../fine-stew/niri;
       recursive = true;
     };
   };
