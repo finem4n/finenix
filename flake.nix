@@ -42,7 +42,7 @@
               ./modules/users/${username}
               ./modules/desktop/niri-alles
               ./hosts/${system}/${host}
-              ./finehome/programs/niri
+              # ./finehome/programs/niri
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true; # TODO whats that

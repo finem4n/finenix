@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [ 
+    ../../../../programs/niri
+  ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
   home.homeDirectory = "/home/fineman";
