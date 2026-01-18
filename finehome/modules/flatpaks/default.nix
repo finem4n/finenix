@@ -2,6 +2,7 @@
   declarative-flatpak, 
   config,
   lib,
+  pkgs,
   ... 
 }: 
 
