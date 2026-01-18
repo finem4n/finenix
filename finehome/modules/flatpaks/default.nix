@@ -5,20 +5,16 @@
   ... 
 }: 
 
+imports = [
+  declarative-flatpak.homeModules.default
+];
+
 let
   cfg = config.home.modules.flatpaks.config;
 in {
   options.home.modules.flatpaks.config = {
     enable = lib.mkEnableOption "Enable declarative-flatpak";
   };
-
-  imports = 
-    if cfg.enable then
-      [
-        declarative-flatpak.homeModules.default
-      ]
-    else
-      [];
 
   config = lib.mkIf cfg.enable {
     services.flatpak = {
