@@ -15,7 +15,7 @@
   home.programs.niri.config.enable = true;
 
   # Gaming - move to its own roles sth sth
-  home.programs.steam.enable = true;
+  home.programs.steam-flatpak.enable = true;
 
   home.packages = with pkgs; [
   ];

@@ -6,7 +6,8 @@
 }: 
 
 let
-  cfg = config.home.programs.steam;
+  # TODO move all programs to modules or sth
+  cfg = config.home.programs.steam-flatpak;
 
   arch = 
     if pkgs.stdenv.isx86_64 then
@@ -18,7 +19,7 @@ in {
     ../../modules/flatpaks
   ];
 
-  options.home.programs.steam = {
+  options.home.programs.steam-flatpak = {
     enable = lib.mkEnableOption "Enable steam flatpak";
   };
 
