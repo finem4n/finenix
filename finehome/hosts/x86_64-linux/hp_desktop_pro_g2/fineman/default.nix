@@ -11,8 +11,12 @@
 
   home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
 
+  # move to desktop default.nix or sth sth
   home.programs.niri.config.enable = true;
-  home.modules.flatpaks.config.enable = true;
+
+  # Gaming - move to its own roles sth sth
+  home.programs.steam.enable = true;
+
   home.packages = with pkgs; [
   ];
 }

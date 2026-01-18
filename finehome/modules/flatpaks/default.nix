@@ -13,7 +13,7 @@ let
     if pkgs.stdenv.isx86_64 then
       "x86_64"
     else
-      throw "What are you doin";
+      throw "What are you doin?";
 in {
   imports = [
     declarative-flatpak.homeModules.default
