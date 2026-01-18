@@ -6,8 +6,7 @@
 }: 
 
 let
-  # TODO move all programs to modules or sth
-  cfg = config.home.modules.steam;
+  cfg = config.home.modules.localsend;
 
   arch = 
     if pkgs.stdenv.isx86_64 then
@@ -19,20 +18,16 @@ in {
     ../flatpaks
   ];
 
-  options.home.modules.steam = {
-    enable = lib.mkEnableOption "Enable steam flatpak";
+  options.home.modules.localsend = {
+    enable = lib.mkEnableOption "Enable flatseal flatpak";
   };
 
   config = lib.mkIf cfg.enable {
     home.modules.flatpaks.config.enable = true;
 
     services.flatpak.packages = lib.mkAfter [
-      "flathub:app/com.valvesoftware.Steam/${arch}/stable"
+      "flathub:app/org.localsend.localsend_app/${arch}/stable"
     ];
-
-    home.packages = with pkgs; [
-      steam-devices-udev-rules
-    ];
-    # TODO add config
+  # TODO add config
   };
 }

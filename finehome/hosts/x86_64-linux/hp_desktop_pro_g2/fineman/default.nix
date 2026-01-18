@@ -16,6 +16,7 @@
 
   # Gaming - move to its own roles sth sth
   home.modules.steam.enable = true;
+  home.modules.localsend.enable = true;
 
   home.packages = with pkgs; [
   ];
