@@ -12,9 +12,13 @@ in {
     enable = lib.mkEnableOption "Enable declarative-flatpak";
   };
 
-  imports = lib.mkIf cfg.enable [
-    declarative-flatpak.homeModules.default
-  ];
+  imports = 
+    if cfg.enable 
+      [
+        declarative-flatpak.homeModules.default
+      ]
+    else
+      [];
 
   config = lib.mkIf cfg.enable {
     services.flatpak = {
