@@ -7,9 +7,12 @@
 
 let
   cfg = config.home.modules.flatpaks.config;
-  lib.mkIf pkgs.stdenv.isx86_64 {
-    arch = "x86_64"
-  };
+
+  arch = 
+    if pkgs.stdenv.is86_64 then
+      "x86_64"
+    else
+      throw "What are you doin";
 in {
   imports = [
     declarative-flatpak.homeModules.default
