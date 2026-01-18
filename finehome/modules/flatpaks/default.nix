@@ -13,7 +13,7 @@ in {
   };
 
   imports = 
-    if cfg.enable 
+    if cfg.enable then
       [
         declarative-flatpak.homeModules.default
       ]
