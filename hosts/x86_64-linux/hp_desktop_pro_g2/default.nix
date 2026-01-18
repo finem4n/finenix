@@ -16,7 +16,10 @@
   modules.desktop.niri-alles.enable = true;
 
   services.flatpak.enable = true;
-  programs.localsend.openFirewall = true;
+  # programs.localsend.openFirewall = true;
+  # Localsend # TODO move to other file
+  networking.firewall.allowedTCPPorts =  [ 53317 ];
+  networking.firewall.allowedUDPPorts =  [ 53317 ];
 
   # TODO question 
   # in flake.nix what´s the purpose of outputs = inputs@{ self, nixpkgs, ... }: {
