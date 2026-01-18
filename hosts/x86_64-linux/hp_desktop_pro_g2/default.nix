@@ -15,6 +15,8 @@
   modules.users.fineman.enable = true;
   modules.desktop.niri-alles.enable = true;
 
+  services.flatpak.enable = true;
+
   # TODO question 
   # in flake.nix what´s the purpose of outputs = inputs@{ self, nixpkgs, ... }: {
   # but why does it work without inputs@

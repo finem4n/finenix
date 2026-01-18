@@ -12,8 +12,9 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    xdg.configFile."niri" = {
+    xdg.configFile.niri = {
       source = ../../../fine-stew/niri/.config/niri;
+      # TODO or maybe should i do fetchfrom git???
       recursive = true;
     };
   };
