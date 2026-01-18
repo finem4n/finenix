@@ -7,7 +7,7 @@
 
 let
   # TODO move all programs to modules or sth
-  cfg = config.home.programs.steam-flatpak;
+  cfg = config.home.modules.steam;
 
   arch = 
     if pkgs.stdenv.isx86_64 then
@@ -16,10 +16,10 @@ let
       throw "What are you doin?";
 in {
   imports = [
-    ../../modules/flatpaks
+    ../flatpaks
   ];
 
-  options.home.programs.steam-flatpak = {
+  options.home.modules.steam = {
     enable = lib.mkEnableOption "Enable steam flatpak";
   };
 
@@ -28,6 +28,10 @@ in {
 
     services.flatpak.packages = lib.mkAfter [
       "flathub:app/com.valvesoftware.Steam/${arch}/stable"
+    ];
+
+    home.packages = with pkgs; [
+      steam-devices-udev-rules
     ];
   };
 }

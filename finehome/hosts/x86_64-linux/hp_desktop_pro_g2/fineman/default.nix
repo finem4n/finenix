@@ -3,7 +3,7 @@
 {
   imports = [ 
     ../../../../programs/niri
-    ../../../../programs/steam
+    ../../../../modules/steam
   ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
@@ -15,7 +15,7 @@
   home.programs.niri.config.enable = true;
 
   # Gaming - move to its own roles sth sth
-  home.programs.steam-flatpak.enable = true;
+  home.modules.steam.enable = true;
 
   home.packages = with pkgs; [
   ];
