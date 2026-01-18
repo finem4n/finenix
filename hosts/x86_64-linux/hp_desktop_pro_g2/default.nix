@@ -16,6 +16,7 @@
   modules.desktop.niri-alles.enable = true;
 
   services.flatpak.enable = true;
+  programs.localsend.openFirewall = true;
 
   # TODO question 
   # in flake.nix what´s the purpose of outputs = inputs@{ self, nixpkgs, ... }: {
