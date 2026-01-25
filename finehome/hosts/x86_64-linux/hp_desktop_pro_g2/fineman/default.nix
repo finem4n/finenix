@@ -4,7 +4,9 @@
   imports = [ 
     # TODO move niri to other folder
     ../../../../programs/niri
+    # TODO put sth like gaming alles option
     ../../../../modules/steam
+    ../../../../modules/gaming/utils/protonup-qt
     ../../../../modules/localsend
     ../../../../modules/firefox
   ];
@@ -19,6 +21,7 @@
 
   # Gaming - move to its own roles sth sth
   home.modules.steam.enable = true;
+  home.modules.gaming.utils.protonup-qt.enable = true;
   home.modules.localsend.enable = true;
 
   home.packages = with pkgs; [

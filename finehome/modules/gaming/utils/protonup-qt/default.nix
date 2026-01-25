@@ -6,9 +6,8 @@
 }: 
 
 let
-  # TODO move to folder gaming or sth
   # TODO move all programs to modules or sth
-  cfg = config.home.modules.steam;
+  cfg = config.home.modules.gaming.utils.protonup-qt;
 
   arch = 
     if pkgs.stdenv.isx86_64 then
@@ -20,19 +19,15 @@ in {
     ../flatpaks
   ];
 
-  options.home.modules.steam = {
-    enable = lib.mkEnableOption "Enable steam flatpak";
+  options.home.modules.gaming.utils.protonup-qt = {
+    enable = lib.mkEnableOption "Enable ProtonUp-Qt Flatpak";
   };
 
   config = lib.mkIf cfg.enable {
     home.modules.flatpaks.config.enable = true;
 
     services.flatpak.packages = lib.mkAfter [
-      "flathub:app/com.valvesoftware.Steam/${arch}/stable"
-    ];
-
-    home.packages = with pkgs; [
-      steam-devices-udev-rules
+      "flathub:app/net.davidotek.pupgui2/${arch}/stable"
     ];
     # TODO add config
   };
