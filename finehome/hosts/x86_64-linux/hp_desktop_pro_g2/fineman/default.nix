@@ -2,9 +2,11 @@
 
 {
   imports = [ 
+    # TODO move niri to other folder
     ../../../../programs/niri
     ../../../../modules/steam
     ../../../../modules/localsend
+    ../../../../modules/firefox
   ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
