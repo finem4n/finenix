@@ -6,6 +6,8 @@
   imports = [
     ../../../../modules/firefox
   ];
-  home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
 
+  home.modules.firefox.enable = true;
+
+  home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
 }

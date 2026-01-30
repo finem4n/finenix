@@ -19,6 +19,9 @@
   # move to desktop default.nix or sth sth
   home.programs.niri.config.enable = true;
 
+  # Productivity
+  home.modules.firefox.enable = true;
+
   # Gaming - move to its own roles sth sth
   home.modules.steam.enable = true;
   home.modules.gaming.utils.protonup-qt.enable = true;
