@@ -22,9 +22,14 @@
     };
 
     declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
+
+    nixgl = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, ... }: {
+  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, ... }: {
     nixosConfigurations = {
       hp_desktop_pro_g2 = 
         let 
@@ -61,6 +66,10 @@
     homeConfigurations."ejserek_swift_pi" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [ ./finehome/hosts/x86_64-linux/ejserek_swift_pi/fineman ];
+
+      extraSpecialArgs = {
+        nixgl = nixgl;
+      };
     };
   };
 }
