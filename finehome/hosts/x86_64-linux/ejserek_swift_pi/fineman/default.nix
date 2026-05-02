@@ -12,12 +12,16 @@
     ../../../../modules/anki
   ];
 
-
   # TODO: move to its own module
-  nixGL.packages = import nixgl { inherit pkgs; };
-  nixGL.defaultWrapper = "mesa";
-  nixGL.installScripts = [ "mesa" ];
+  targets.genericLinux.nixGL.packages = import nixgl { inherit pkgs; };
+  targets.genericLinux.nixGL.defaultWrapper = "mesa";
+  targets.genericLinux.nixGL.installScripts = [ "mesa" ];
   # programs.satty.enable = true;
+
+  programs.chromium= {
+    enable = true;
+    package = (config.lib.nixGL.wrap pkgs.chromium);
+  };
 
   # TODO: move to its own packages
   home.packages = [
@@ -29,13 +33,11 @@
     enable = true;
     unnixed.enable = true;
   };
+
   home.modules.anki = {
     enable = true;
     videoDriver = "software";
   };
-
-
-
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common

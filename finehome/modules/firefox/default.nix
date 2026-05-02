@@ -23,6 +23,7 @@ in {
       # TODO: check options
         enable = true;
 
+        # FIX: add espanol
         languagePacks = [ "en-GB" "pl" "de" ];
 
         profiles = {
@@ -108,8 +109,8 @@ in {
           };
 
           Preferences = {
-          # here are things from about:config
-          # and from https://searchfox.org/firefox-main/source/modules/libpref/init/StaticPrefList.yaml
+          # NOTE: here are things from about:config
+          # NOTE: and from https://searchfox.org/firefox-main/source/modules/libpref/init/StaticPrefList.yaml
             "browser.aboutwelcome.enabled" = {
               Value = false;
               Status = "locked";
@@ -137,6 +138,7 @@ in {
     #           '';
               Status = "locked";
             };
+
             # TODO: check if its working
             # "browser.tabs.drawInTitlebar" = {
             #   Value = true;
