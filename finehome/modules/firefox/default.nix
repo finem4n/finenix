@@ -38,6 +38,7 @@ in {
         };
 
         # TODO: https://mynixos.com/home-manager/option/programs.firefox.policies
+        # https://firefox-admin-docs.mozilla.org/reference/policies/
         # https://mozilla.github.io/policy-templates/
         # mini tutorial: https://discourse.nixos.org/t/declare-firefox-extensions-and-settings/36265
         # generalnie dodawaj to co cie wkurwia, bo nie ma sensu czytac wszystkiego
@@ -84,6 +85,10 @@ in {
 
           GenerativeAI = {
             Enabled = false;
+            Chatbot =  false;
+            LinkPreviews = false;
+            TabGroups = false;
+            Locked = true;
           };
 
           ExtensionSettings = {
