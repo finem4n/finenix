@@ -106,6 +106,13 @@ in {
               installation_mode = "force_installed";
               private_browsing = true;
             };
+            "tab-todotxt@finextensions.com " = {
+              default_area = "navbar"; # can be also: menupanel
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-todo-txt/latest.xpi";
+
+              installation_mode = "force_installed";
+              private_browsing = true;
+            };
             # Kanagawa.nvim theme
             "{7efc2a80-496f-49b1-88db-4ddd7d312757}" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/file/4567100/latest.xpi";
