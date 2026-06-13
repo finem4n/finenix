@@ -106,7 +106,7 @@ in {
               installation_mode = "force_installed";
               private_browsing = true;
             };
-            "tab-todotxt@finextensions.com " = {
+            "tab-todotxt@finextensions.com" = {
               default_area = "navbar"; # can be also: menupanel
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-todo-txt/latest.xpi";
 
