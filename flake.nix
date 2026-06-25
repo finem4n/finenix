@@ -31,6 +31,37 @@
 
   outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, ... }: {
     nixosConfigurations = {
+      x13-g4 = 
+        let 
+          system = "x86_64-linux";
+          username = "fineman";
+          host = "x13-g4";
+        in
+          nixpkgs.lib.nixosSystem {
+            inherit system;
+            modules = [
+              # TODO: create common modules
+              disko.nixosModules.disko
+              lanzaboote.nixosModules.lanzaboote
+              ./wihajsters/secureboot-lanzaboote
+              ./modules/users/${username}
+              ./hosts/${system}/${host}
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true; # TODO whats that
+                  useUserPackages = true; # TODO whats that
+                  users.${username} = ./finehome/hosts/${system}/${host}/${username} ;
+                  extraSpecialArgs = {
+                    declarative-flatpak = declarative-flatpak;
+                  };
+                };
+              }
+            ];
+          };
+    };
+
+    nixosConfigurations = {
       hp_desktop_pro_g2 = 
         let 
           system = "x86_64-linux";
