@@ -11,11 +11,11 @@ in {
   options.modules.login-manager = {
     enable = lib.mkEnableOption "Enable login manager";
   };
-
+  # TODO pass through defined user
   config = lib.mkIf cfg.enable {
     services.greetd = {
       enable = true;
-      settings = {
+      settings = rec {
         terminal = {
           vt = 1;
         };
@@ -28,6 +28,7 @@ in {
           command = "${pkgs.greetd}/bin/agreety --cmd sway";
           # command = "${pkgs.sway}/bin/sway";
           user = "fineman";
+	default_session = initial_session;
         };
       };
     };
