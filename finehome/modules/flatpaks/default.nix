@@ -24,9 +24,6 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    # Flatpak dependences:
-    xdg.portal.enable = true;
-
     services.flatpak = {
       enable = true;
       remotes = {

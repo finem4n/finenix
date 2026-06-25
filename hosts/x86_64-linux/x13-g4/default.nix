@@ -15,6 +15,8 @@
   modules.users.fineman.enable = true;
 
   services.flatpak.enable = true;
+  xdg.portal.enable = true;
+
   # programs.localsend.openFirewall = true;
   # Localsend # TODO move to other file
   networking.firewall = {
