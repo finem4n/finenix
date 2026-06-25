@@ -20,7 +20,7 @@
   # home.programs.niri.config.enable = true;
 
   # Productivity
-  # home.modules.firefox.enable = true;
+  home.modules.firefox.enable = true;
 
   # Gaming - move to its own roles sth sth
   # home.modules.steam.enable = true;

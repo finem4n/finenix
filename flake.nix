@@ -43,6 +43,7 @@
               # TODO: create common modules
               ./modules/desktop/sway-alles
               ./modules/login-manager
+	      ./finehome/modules/firefox
 
               disko.nixosModules.disko
               lanzaboote.nixosModules.lanzaboote

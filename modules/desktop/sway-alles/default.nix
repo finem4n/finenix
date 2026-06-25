@@ -17,6 +17,7 @@ in {
       enable = true;
       xwayland.enable = true;
       extraPackages = with pkgs; [
+      	# TODO zrob z tym porzadek; dlaczego pulseaudio i pozamieniaj te tegesy raczej na programs.dfs.enable
         brightnessctl foot grim pulseaudio swayidle swaylock wmenu 
 
         kitty # TODO or wezterm or ghostty
