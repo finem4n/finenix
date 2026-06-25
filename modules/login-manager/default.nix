@@ -24,8 +24,8 @@ in {
       #   user = "fineman";
       # };
         initial_session = {
-          # command = "sway";
-          command = "${pkgs.sway}/bin/sway";
+          command = "sway";
+          # command = "${pkgs.sway}/bin/sway";
           user = "fineman";
         };
       };
