@@ -28,8 +28,8 @@ in {
           command = "${pkgs.greetd}/bin/agreety --cmd sway";
           # command = "${pkgs.sway}/bin/sway";
           user = "fineman";
+	};
 	default_session = initial_session;
-        };
       };
     };
     # TODO test 
