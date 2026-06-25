@@ -39,6 +39,6 @@ in {
     services.gnome.sushi.enable = true;
 
     programs.waybar.enable = true;
-    modules.login-manager = true;
+    modules.login-manager.enable = true;
   };
 }
