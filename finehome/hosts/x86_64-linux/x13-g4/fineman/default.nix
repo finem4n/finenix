@@ -3,12 +3,12 @@
 {
   imports = [ 
     # TODO move niri to other folder
-    ../../../../programs/niri
+    # ../../../../programs/niri
     # TODO put sth like gaming alles option
-    ../../../../modules/steam
-    ../../../../modules/gaming/utils/protonup-qt
-    ../../../../modules/localsend
-    ../../../../modules/firefox
+    # ../../../../modules/steam
+    # ../../../../modules/gaming/utils/protonup-qt
+    # ../../../../modules/localsend
+    # ../../../../modules/firefox
   ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
