@@ -4,7 +4,7 @@
     self.submodules = true;
     # nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     # TODO: create overlay for nixpkgs-unstable
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     disko = {
       url = "github:nix-community/disko/latest";
@@ -17,7 +17,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11"; # TODO let in version
+      url = "github:nix-community/home-manager/release-26.05"; # TODO let in version
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -29,7 +29,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, ... }: {
+  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, ... }: {
     nixosConfigurations = {
       x13-g4 = 
         let 
