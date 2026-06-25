@@ -41,6 +41,9 @@
             inherit system;
             modules = [
               # TODO: create common modules
+              ./modules/desktop/sway-alles
+              ./modules/login-manager
+
               disko.nixosModules.disko
               lanzaboote.nixosModules.lanzaboote
               ./wihajsters/secureboot-lanzaboote
