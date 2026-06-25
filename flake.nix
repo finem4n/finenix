@@ -29,7 +29,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, ... }: {
+  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, ... }: {
     nixosConfigurations = {
       x13-g4 = 
         let 
