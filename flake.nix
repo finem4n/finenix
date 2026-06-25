@@ -43,7 +43,6 @@
               # TODO: create common modules
               ./modules/desktop/sway-alles
               ./modules/login-manager
-	      ./finehome/modules/firefox
 
               disko.nixosModules.disko
               lanzaboote.nixosModules.lanzaboote
@@ -56,6 +55,9 @@
                   useGlobalPkgs = true; # TODO whats that
                   useUserPackages = true; # TODO whats that
                   users.${username} = ./finehome/hosts/${system}/${host}/${username} ;
+		  modules = [
+	      	    ./finehome/modules/firefox
+		  ];
                   extraSpecialArgs = {
                     declarative-flatpak = declarative-flatpak;
                   };
