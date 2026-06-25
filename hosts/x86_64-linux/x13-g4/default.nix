@@ -15,7 +15,13 @@
   modules.users.fineman.enable = true;
 
   services.flatpak.enable = true;
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   # programs.localsend.openFirewall = true;
   # Localsend # TODO move to other file
