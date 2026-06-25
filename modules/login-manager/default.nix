@@ -23,11 +23,11 @@ in {
           command = "${pkgs.greetd}/bin/agreety --cmd sway";
           user = "fineman";
         };
-        # initial_session = {
-        #   command = "sway";
-        #   # command = "${pkgs.sway}/bin/sway";
-        #   user = "fineman";
-        # };
+        initial_session = {
+          command = "sway";
+          # command = "${pkgs.sway}/bin/sway";
+          user = "fineman";
+        };
       };
     };
     # TODO test 
