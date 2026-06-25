@@ -40,5 +40,5 @@
   };
 
   programs.home-manager.enable = true;
-  home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
+  home.stateVersion = "26.05"; # Please read the comment before changing. # TODO move to common
 }
