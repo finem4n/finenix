@@ -19,15 +19,15 @@ in {
         terminal = {
           vt = 1;
         };
-      # default_session = {
-      #   command = "${pkgs.greetd.agreety}/bin/agreety -c sway";
-      #   user = "fineman";
-      # };
-        initial_session = {
-          command = "sway";
-          # command = "${pkgs.sway}/bin/sway";
-          user = "fineman";
-        };
+      default_session = {
+        command = "${pkgs.greetd.agreety}/bin/agreety --cmd sway";
+        user = "fineman";
+      };
+        # initial_session = {
+        #   command = "sway";
+        #   # command = "${pkgs.sway}/bin/sway";
+        #   user = "fineman";
+        # };
       };
     };
     # TODO test 
