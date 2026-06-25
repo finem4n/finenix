@@ -16,6 +16,13 @@ in {
     services.greetd = {
       enable = true;
       settings = {
+        terminal = {
+          vt = 1;
+        };
+      default_session = {
+        command = "agreety -c sway";
+        user = "fineman";
+      };
         initial_session = {
           command = "sway";
           user = "fineman";
