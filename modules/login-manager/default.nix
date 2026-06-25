@@ -20,7 +20,7 @@ in {
           vt = 1;
         };
         default_session = {
-          command = "${pkgs.greetd.agreety}/bin/agreety --cmd sway";
+          command = "${pkgs.greetd}/bin/agreety --cmd sway";
           user = "fineman";
         };
         # initial_session = {
