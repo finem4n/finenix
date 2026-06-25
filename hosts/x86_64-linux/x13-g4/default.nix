@@ -18,7 +18,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = with pkgs; [
+    configPackages = with pkgs; [
       xdg-desktop-portal-gtk
     ];
   };
@@ -49,7 +49,8 @@
   # networking.networkmanager.enable = true;
   # TODO configure networking 
   networking.wireless.iwd.enable = true;
-  systemd.network.enable = true;
+  # systemd.network.enable = true; # NOTE shouldn't be used use the one below instead
+  networking.useNetworkd = true;
 
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
