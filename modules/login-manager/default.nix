@@ -19,12 +19,13 @@ in {
         terminal = {
           vt = 1;
         };
-        default_session = {
-          command = "${pkgs.greetd}/bin/agreety --cmd sway";
-          user = "fineman";
-        };
+        # default_session = {
+        #   command = "${pkgs.greetd}/bin/agreety --cmd sway";
+        #   user = "fineman";
+        # };
         initial_session = {
-          command = "sway";
+          # command = "sway";
+          command = "${pkgs.greetd}/bin/agreety --cmd sway";
           # command = "${pkgs.sway}/bin/sway";
           user = "fineman";
         };
