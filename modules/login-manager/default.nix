@@ -25,8 +25,8 @@ in {
         # };
         initial_session = {
           # command = "sway";
-          command = "${pkgs.greetd}/bin/agreety --cmd sway";
-          # command = "${pkgs.sway}/bin/sway";
+          # command = "${pkgs.greetd}/bin/agreety --cmd sway";
+          command = "${pkgs.sway}/bin/sway";
           user = "fineman";
 	};
 	default_session = initial_session;
