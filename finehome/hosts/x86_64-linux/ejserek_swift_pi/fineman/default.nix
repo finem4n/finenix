@@ -30,8 +30,10 @@
   ];
 
   home.modules.firefox = {
+    # enable = false;
     enable = true;
-    unnixed.enable = true;
+    unnixed.enable = false;
+    # unnixed.enable = true;
   };
 
   home.modules.anki = {
