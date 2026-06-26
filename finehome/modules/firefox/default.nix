@@ -24,7 +24,7 @@ in {
         enable = true;
 
         # FIX: add espanol
-        languagePacks = [ "en-GB" "pl" "de" ];
+        languagePacks = [ "en-GB" "pl" "de" "es" ];
 
         profiles = {
           default = {
