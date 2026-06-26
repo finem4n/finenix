@@ -22,6 +22,7 @@ in {
       programs.firefox = {
       # TODO: check options
         enable = true;
+        configPath = "${config.xdg.configHome}/mozilla/firefox";
 
         # FIX: add espanol
         languagePacks = [ "en-GB" "pl" "de" "es" ];
