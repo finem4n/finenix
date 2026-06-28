@@ -28,7 +28,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dotflies.url = "github:finem4n/dotfiles";
+    dotflies = {
+      url = "github:finem4n/dotfiles";
+      flake = false; # it makes it so it won't ask for flake.nix
+    };
   };
 
   outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, dotflies, ... }: {
