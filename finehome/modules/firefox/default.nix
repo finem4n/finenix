@@ -138,11 +138,18 @@ in {
               Value = false;
               Status = "locked";
             };
+
             "browser.translations.automaticallyPopup" = {
               Value = false;
               Status = "locked";
             };
 
+	    "browser.uiCustomization.state" = {
+	      Value = ''
+{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["ublock0_raymondhill_net-browser-action"],"nav-bar":["sidebar-button","alltabs-button","sync-button","firefox-view-button","reset-pbm-toolbar-button","back-button","forward-button","stop-reload-button","urlbar-container","vertical-spacer","keepassxc-browser_keepassxc_org-browser-action","unified-extensions-button","open-file-button","share-tab-button","send-tab-button","downloads-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["personal-bookmarks"]},"seen":["reset-pbm-toolbar-button","developer-button","keepassxc-browser_keepassxc_org-browser-action","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","TabsToolbar","vertical-tabs","unified-extensions-area","toolbar-menubar","PersonalToolbar"],"currentVersion":24,"newElementCount":3}
+	      '';
+	      Status = "locked";
+	    };
             "browser.uiCustomization.value" = {
               # Value = ''
     # {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["ublock0_raymondhill_net-browser-action"],"nav-bar":["sidebar-button","sync-button","alltabs-button","firefox-view-button","back-button","forward-button","stop-reload-button","urlbar-container","vertical-spacer","keepassxc-browser_keepassxc_org-browser-action","downloads-button","fxa-toolbar-menu-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["personal-bookmarks"]},"seen":["keepassxc-browser_keepassxc_org-browser-action","ublock0_raymondhill_net-browser-action","developer-button","screenshot-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","TabsToolbar","vertical-tabs","toolbar-menubar","PersonalToolbar"],"currentVersion":23,"newElementCount":4}
