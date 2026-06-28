@@ -169,6 +169,11 @@ in {
               '';
 	      Status = "locked";
 	    };
+
+	    "browser.tabs.inTitlebar" = {
+	      Value = 0;
+	      Status = "locked";
+	    };
             # TODO: check if its working
             # "browser.tabs.drawInTitlebar" = {
             #   Value = true;
