@@ -8,12 +8,23 @@
   imports = [
       ./hardware-configuration.nix
       ./disko-config.nix
-    ];
+  ];
 
   # TODO add lanzaboote
   wihajsters.secureboot-lanzaboote.enable = true;
+
+
   modules.users.fineman.enable = true;
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+
   modules.desktop.sway-alles.enable = true;
+
+
 
   services.flatpak.enable = true;
   xdg.portal = {

@@ -52,6 +52,22 @@
         "type": "github"
       }
     },
+    "dotflies": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782666137,
+        "narHash": "sha256-iMb2e2qlsO9Qwx48ISORl9DwiziezcR34qhoo6TMQns=",
+        "owner": "finem4n",
+        "repo": "dotfiles",
+        "rev": "6e21e0ee995114d22ad728318e2b9c02e34eaa3e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "finem4n",
+        "repo": "dotfiles",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -217,6 +233,7 @@
       "inputs": {
         "declarative-flatpak": "declarative-flatpak",
         "disko": "disko",
+        "dotflies": "dotflies",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixgl": "nixgl",

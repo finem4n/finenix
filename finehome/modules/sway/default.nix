@@ -6,12 +6,13 @@
 }: 
 
 let
-  cfg = config.home.programs.sway.config;
+  cfg = config.home.modules.sway.config;
 in {
-  options.home.programs.sway.config = {
+  options.home.modules.sway.config = {
     enable = lib.mkEnableOption "Enable sway config";
   };
 
+  # TODO needs configuring
   config = lib.mkIf cfg.enable {
     # xdg.configFile.niri = {
     #   source = ../../../fine-stew/niri/.config/niri;

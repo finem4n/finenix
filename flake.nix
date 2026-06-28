@@ -63,6 +63,7 @@
                   users.${username} = ./finehome/hosts/${system}/${host}/${username} ;
                   extraSpecialArgs = {
                     declarative-flatpak = declarative-flatpak;
+		    dotflies = dotflies;
                   };
                 };
               }
