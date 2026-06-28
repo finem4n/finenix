@@ -9,12 +9,13 @@
     # ../../../../modules/gaming/utils/protonup-qt
     ../../../../modules/localsend
     ../../../../modules/firefox
+    ../../../../modules/sway
   ];
   # TODO add if my user is enabled then
   home.username = "fineman"; # TODO read from file or sth
   home.homeDirectory = "/home/fineman";
 
-  home.stateVersion = "25.11"; # Please read the comment before changing. # TODO move to common
+  home.stateVersion = "26.05"; # Please read the comment before changing. # TODO move to common
 
   # move to desktop default.nix or sth sth
   # home.programs.niri.config.enable = true;
@@ -26,6 +27,7 @@
   home.modules.steam.enable = true;
   # home.modules.gaming.utils.protonup-qt.enable = true;
   home.modules.localsend.enable = true;
+  home.modules.sway.config.enable = true;
 
   home.packages = with pkgs; [
   ];

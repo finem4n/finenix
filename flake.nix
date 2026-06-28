@@ -27,9 +27,11 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dotflies.url = "github:finem4n/dotfiles";
   };
 
-  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, ... }: {
+  outputs = { self, nixpkgs, disko, lanzaboote, home-manager, declarative-flatpak, nixgl, dotflies, ... }: {
     nixosConfigurations = {
       x13-g4 = 
         let 
